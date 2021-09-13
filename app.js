@@ -17,6 +17,11 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const sass = require('node-sass-middleware');
 const multer = require('multer');
+const http = require('http');
+//importing cluster module for speeding up the application
+const cluster = require('cluster')
+//importing crypto for hashing purpose
+const crypto = require('crypto')
 
 const upload = multer({ dest: path.join(__dirname, 'uploads') });
 
